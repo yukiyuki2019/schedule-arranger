@@ -100,9 +100,6 @@ router.get('/:scheduleId', authenticationEnsurer, (req, res, next) => {
               availabilityMapMap.set(u.userId, map);
             });
           });
-          
-
-          console.log(availabilityMapMap); // TODO 除去する
 
           res.render('schedule', {
             user: req.user,
