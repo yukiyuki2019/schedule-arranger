@@ -6,6 +6,7 @@ var logger = require('morgan');
 var helmet = require('helmet');
 var session = require('express-session');
 var passport = require('passport');
+var favicon = require('serve-favicon')
 
 // モデルの読み込み
 var User = require('./models/user');
@@ -64,6 +65,7 @@ var commentsRouter = require('./routes/comments');
 
 var app = express();
 app.use(helmet());
+app.use(favicon(path.join(__dirname, 'public/images/favicon.ico')))
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
