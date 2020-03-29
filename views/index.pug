@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  div.jumbotron.my-3
+  div.jumbotron.my-3.alert-primary
     h1.display-4 予定調整くん
     p.lead 予定調整くんは、GitHubで認証でき、予定を作って出欠が取れるサービスです
   if user
@@ -24,4 +24,4 @@ block content
             td #{schedule.formattedUpdatedAt}
     else
       div
-        a(href="/login") ログイン
+        p.lead.my-3 予定はありません
