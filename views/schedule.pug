@@ -8,6 +8,7 @@ block content
       p(style="white-space:pre;") #{schedule.memo}
     div.card-footer
       p 作成者: #{schedule.user.username}
+      button(onclick="clipURL()").btn.btn-outline-primary URLをコピー
   - var isMine = parseInt(user.id) === schedule.user.userId
   if isMine
     div

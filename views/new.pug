@@ -2,6 +2,7 @@ extends layout
 
 block content
   form(action="/schedules", method="post").my-3
+    input(type="hidden", name="_csrf" value!=csrfToken)
     div.form-group
       label(for="scheduleName") 予定名(255文字まで)
       input(type="text", name="scheduleName" placeholder="予定" maxlength="255" autocomplete="off")#scheduleName.form-control
